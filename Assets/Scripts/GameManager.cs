@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     // private int currentTurn = 0;
 
+    private bool isClear = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,27 +22,26 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void ProgressUpdate(int addProgress)
+    public void ProgressUpdate(int addProgress)
     {
-        progress += addProgress;
-        Debug.Log($"進捗率 : {progress}%");
-
-        if ( progress >= 100 )
+        if (!isClear)
         {
-            progress = 100;
-            isClear();
+            progress += addProgress;
+            Debug.Log($"経過進捗率 : {progress}%");
+
+            if (progress >= 100)
+            {
+                progress = 100;
+                Debug.Log($"修正進捗率 : {progress}%");
+
+                Clear();
+            }
         }
     }
 
-    public void ClickWalkButton()
+    private void Clear()
     {
-        int addProgress = UnityEngine.Random.Range(3, 8);
-
-        ProgressUpdate(addProgress);
-    }
-
-    private void isClear()
-    {
-
+        isClear = true;
+        Debug.Log("Clear!!!");
     }
 }
