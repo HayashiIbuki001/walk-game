@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RestCommand : MonoBehaviour
 {
+    [SerializeField] PlayerStatus status;
+
     private float[] weights = { 0.5f, 0.3f, 0.2f };
     float r = 0;
     float sum = 0;
@@ -24,18 +26,31 @@ public class RestCommand : MonoBehaviour
         }
     }
 
+    /// <summary> 通常休憩イベント </summary>
     private void EventA()
     {
-        Debug.Log($"EventA");
+
+        int addStaminaAmount = 30;
+
+        status.AddStamina(addStaminaAmount);
+        Debug.Log($"休憩イベントA : スタミナを{addStaminaAmount}回復");
     }
 
+    /// <summary> 確率休憩イベント(バフ) </summary>
     private void EventB()
     {
-        Debug.Log($"EventB");
+        int addStaminaAmount = 50;
+
+        status.AddStamina(addStaminaAmount);
+        Debug.Log($"休憩イベントB : スタミナを{addStaminaAmount}回復");
     }
 
+    /// <summary> 確率休憩イベント(デバフ) </summary>
     private void EventC()
     {
-        Debug.Log($"EventC");
+        int addStaminaAmount = 10;
+
+        status.AddStamina(addStaminaAmount);
+        Debug.Log($"休憩イベントC : スタミナを{addStaminaAmount}回復");
     }
 }
