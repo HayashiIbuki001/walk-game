@@ -2810,8 +2810,6 @@ GameObject:
   - component: {fileID: 1915577978}
   - component: {fileID: 1915577977}
   - component: {fileID: 1915577979}
-  - component: {fileID: 1915577980}
-  - component: {fileID: 1915577981}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2863,35 +2861,6 @@ MonoBehaviour:
   maxStamina: 100
   hpBar: {fileID: 949275069}
   staminaBar: {fileID: 655876410}
---- !u!114 &1915577980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915577976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bbe1be57c2cdb34d8facd31f227cd0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  items: []
---- !u!114 &1915577981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915577976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c5820c365dca147888ce14993c55a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemDrop
-  dropItems:
-  - {fileID: 11400000, guid: 1b0a1bfc715f9b543bd6fb5a91fd4095, type: 2}
-  - {fileID: 11400000, guid: e0a67b384faca5b4ea77ff2ec115ef18, type: 2}
-  inventory: {fileID: 1915577980}
 --- !u!1 &1946652263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,7 +2992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8010a09ce55b3b4ea1339674fd9e3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExploreCommand
-  itemDrop: {fileID: 0}
+  itemDrop: {fileID: 1892299579}
 --- !u!114 &2038787593
 MonoBehaviour:
   m_ObjectHideFlags: 0
