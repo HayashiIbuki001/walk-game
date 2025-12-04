@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a400d86f46fd4d44b6bbf76555bc9e8, type: 3}
   m_Name: Herb
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: "\u85AC\u8349"
-  itemDescription: "\u3044\u308D\u3044\u308D\u306A\u30A2\u30A4\u30C6\u30E0\u306B\u6DF7\u305C\u3066\u4F7F\u3046\u3002"
-  itemType: Material
+  itemName: "\u82B1"
+  desc: 
+  type: 1

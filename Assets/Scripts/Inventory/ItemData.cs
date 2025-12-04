@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "MyGame/Item")]
+[CreateAssetMenu(menuName = "WalkGame/Item")]
 public class ItemData : ScriptableObject
 {
     public string itemName; // –¼‘O
@@ -11,5 +11,6 @@ public class ItemData : ScriptableObject
 public enum ItemType
 {
     Heal,
-    Material
+    Material,
+    Item
 }
