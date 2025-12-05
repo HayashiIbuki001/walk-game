@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41c88e595c1b6d46b5a2e4cc9112145, type: 3}
+  m_Name: Park
+  m_EditorClassIdentifier: Assembly-CSharp::ExploreMapData
+  MapName: "\u516C\u5712"
+  DropItems:
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: 84f3e82e79aada54f8fd3fd0907726c5, type: 2}
+  - {fileID: 11400000, guid: e0a67b384faca5b4ea77ff2ec115ef18, type: 2}
+  - {fileID: 11400000, guid: e0a67b384faca5b4ea77ff2ec115ef18, type: 2}
+  - {fileID: 11400000, guid: e0a67b384faca5b4ea77ff2ec115ef18, type: 2}
+  - {fileID: 11400000, guid: 734597563cfd9d743b7f6db4999ae804, type: 2}
+  eventTable:
+  - eventName: EventA
+    probability: 0.3
+  - eventName: EventB
+    probability: 0.15
+  - eventName: EventC
+    probability: 0.05

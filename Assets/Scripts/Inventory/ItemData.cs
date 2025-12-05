@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "WalkGame/Item")]
+[CreateAssetMenu(menuName = "Walk Game/Item")]
 public class ItemData : ScriptableObject
 {
     public string itemName; // –¼‘O
