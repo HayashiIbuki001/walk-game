@@ -388,6 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SelectButton
   inventory: {fileID: 1892299580}
   data: {fileID: 11400000, guid: 39d9a6c6a0b114e4fbe9f2052d9c771c, type: 2}
+  parkEvents: {fileID: 0}
 --- !u!1 &87452368
 GameObject:
   m_ObjectHideFlags: 0
