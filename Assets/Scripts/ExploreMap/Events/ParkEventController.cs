@@ -13,18 +13,18 @@ public class ParkEventController : MonoBehaviour
         }
     }
 
-    private void EventA()
+    public void EventA()
     {
         Debug.Log("”L‚Æ‘˜‹ö‚µ‚½");
     }
 
-    private void EventB()
+    public void EventB()
     {
-        Debug.Log("");
+        Debug.Log("’m‚ç‚È‚¢l‚Æo‰ï‚Á‚½");
     }
 
-    private void EventC()
+    public void EventC()
     {
-
+        Debug.Log("‰J‚ª~‚Á‚Ä‚«‚½");
     }
 }
