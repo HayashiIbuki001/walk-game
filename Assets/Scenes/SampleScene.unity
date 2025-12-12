@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 11113000}
   - component: {fileID: 11112999}
   - component: {fileID: 11112998}
+  - component: {fileID: 11113001}
   m_Layer: 5
   m_Name: SelectButton_3
   m_TagString: Untagged
@@ -201,7 +202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11112999}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11113001}
+        m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &11112999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +253,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11112996}
   m_CullTransparentMesh: 1
+--- !u!114 &11113001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11112996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  inventory: {fileID: 1892299580}
+  data: {fileID: 11400000, guid: 07a8fec50606bd24c82b7aacce0a2cab, type: 2}
+  locationIndex: 2
 --- !u!1 &81740107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1837,7 @@ GameObject:
   - component: {fileID: 802674327}
   - component: {fileID: 802674326}
   - component: {fileID: 802674325}
+  - component: {fileID: 802674328}
   m_Layer: 5
   m_Name: SelectButton_4
   m_TagString: Untagged
@@ -1879,7 +1908,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 802674326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 802674328}
+        m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &802674326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1918,6 +1959,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802674323}
   m_CullTransparentMesh: 1
+--- !u!114 &802674328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802674323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  inventory: {fileID: 1892299580}
+  data: {fileID: 11400000, guid: 07a8fec50606bd24c82b7aacce0a2cab, type: 2}
+  locationIndex: 3
 --- !u!1 &841941249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2504,9 @@ GameObject:
   - component: {fileID: 1091446891}
   - component: {fileID: 1091446890}
   - component: {fileID: 1091446889}
+  - component: {fileID: 1091446894}
+  - component: {fileID: 1091446893}
+  - component: {fileID: 1091446892}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -2522,9 +2581,135 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  alleyEvents: []
-  buildingEvents: []
-  shopBackEvents: []
+  alleyEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446889}
+        m_TargetAssemblyTypeName: ParkEventController, Assembly-CSharp
+        m_MethodName: EventA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446894}
+        m_TargetAssemblyTypeName: BuildingEventController, Assembly-CSharp
+        m_MethodName: EventB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446894}
+        m_TargetAssemblyTypeName: BuildingEventController, Assembly-CSharp
+        m_MethodName: EventC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  buildingEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446893}
+        m_TargetAssemblyTypeName: ShopBackEventController, Assembly-CSharp
+        m_MethodName: EventA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446893}
+        m_TargetAssemblyTypeName: ShopBackEventController, Assembly-CSharp
+        m_MethodName: EventB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446893}
+        m_TargetAssemblyTypeName: ShopBackEventController, Assembly-CSharp
+        m_MethodName: EventC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  shopBackEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446892}
+        m_TargetAssemblyTypeName: AlleyEventController, Assembly-CSharp
+        m_MethodName: EventA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446892}
+        m_TargetAssemblyTypeName: AlleyEventController, Assembly-CSharp
+        m_MethodName: EventB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091446892}
+        m_TargetAssemblyTypeName: AlleyEventController, Assembly-CSharp
+        m_MethodName: EventC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1091446891
 Transform:
   m_ObjectHideFlags: 0
@@ -2540,6 +2725,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091446892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091446888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ec9139919f9024c92230b8d278d3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlleyEventController
+--- !u!114 &1091446893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091446888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f76e575644156479f882fc43cad320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopBackEventController
+--- !u!114 &1091446894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091446888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a080766e019fa1419b70342359a7cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingEventController
 --- !u!1 &1101876002
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,6 +5026,7 @@ GameObject:
   - component: {fileID: 1921138797}
   - component: {fileID: 1921138796}
   - component: {fileID: 1921138795}
+  - component: {fileID: 1921138798}
   m_Layer: 5
   m_Name: SelectButton_2
   m_TagString: Untagged
@@ -4875,7 +5097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921138796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1921138798}
+        m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1921138796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4914,6 +5148,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921138793}
   m_CullTransparentMesh: 1
+--- !u!114 &1921138798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921138793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  inventory: {fileID: 1892299580}
+  data: {fileID: 11400000, guid: f8890a3b4507b5a49b91c3de324368e9, type: 2}
+  locationIndex: 1
 --- !u!1 &1946652263
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a400d86f46fd4d44b6bbf76555bc9e8, type: 3}
-  m_Name: BicycleParts
+  m_Name: MissingParts
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: "\u9306\u3073\u305F\u81EA\u8EE2\u8ECA\u306E\u90E8\u54C1"
+  itemName: "\u4F55\u304B\u306E\u90E8\u54C1"
   desc: 
   type: 1
