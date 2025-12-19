@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ParkEventController : MonoBehaviour
 {
@@ -15,16 +16,16 @@ public class ParkEventController : MonoBehaviour
 
     public void EventA()
     {
-        Debug.Log("”L‚Æ‘˜‹ö‚µ‚½");
+        ExploreText.Instance.Enqueue($"wao! neko!");
     }
 
     public void EventB()
     {
-        Debug.Log("’m‚ç‚È‚¢l‚Æo‰ï‚Á‚½");
+        ExploreText.Instance.Enqueue("who are you?");
     }
 
     public void EventC()
     {
-        Debug.Log("‰J‚ª~‚Á‚Ä‚«‚½");
+        ExploreText.Instance.Enqueue("oh! rain!");
     }
 }

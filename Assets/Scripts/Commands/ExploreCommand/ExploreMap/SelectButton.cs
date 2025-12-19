@@ -21,5 +21,7 @@ public class SelectButton : MonoBehaviour
         var item = data.DropItems[index];
 
         inventory.AddItem(item);
+
+        ExploreText.Instance.Enqueue($"{item.itemName} getting.");
     }
 }
