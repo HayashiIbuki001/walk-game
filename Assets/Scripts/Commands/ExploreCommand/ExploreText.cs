@@ -11,6 +11,7 @@ public class ExploreText : MonoBehaviour
     bool isShowing;
 
     [SerializeField] TextMeshProUGUI textUI;
+    [SerializeField] private GameObject mainCanvas;
 
     void Awake()
     {
@@ -18,11 +19,19 @@ public class ExploreText : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (isShowing && Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            ShowNext();
+        }
+    }
+
     public void Enqueue(string message)
     {
         textQueue.Enqueue(message);
 
-        if (!isShowing && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (!isShowing)
         {
             ShowNext();
         }
@@ -34,6 +43,9 @@ public class ExploreText : MonoBehaviour
         {
             isShowing = false;
             gameObject.SetActive(false);
+
+            mainCanvas.SetActive(true);
+
             return;
         }
 

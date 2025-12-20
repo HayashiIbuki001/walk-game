@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  ExploreCanvas: {fileID: 405317145}
   inventory: {fileID: 1892299580}
   data: {fileID: 11400000, guid: e83836cd3fd71c44e93f7257daf8ed0c, type: 2}
   locationIndex: 2
@@ -414,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  ExploreCanvas: {fileID: 405317145}
   inventory: {fileID: 1892299580}
   data: {fileID: 11400000, guid: 39d9a6c6a0b114e4fbe9f2052d9c771c, type: 2}
   locationIndex: 0
@@ -2240,6 +2242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  ExploreCanvas: {fileID: 405317145}
   inventory: {fileID: 1892299580}
   data: {fileID: 11400000, guid: 07a8fec50606bd24c82b7aacce0a2cab, type: 2}
   locationIndex: 3
@@ -3553,6 +3556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExploreText
   textUI: {fileID: 482832997}
+  mainCanvas: {fileID: 1043399092}
 --- !u!1 &1288455708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,6 +5485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1362dd52c0c4446aa3eee6c65913e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectButton
+  ExploreCanvas: {fileID: 405317145}
   inventory: {fileID: 1892299580}
   data: {fileID: 11400000, guid: f8890a3b4507b5a49b91c3de324368e9, type: 2}
   locationIndex: 1

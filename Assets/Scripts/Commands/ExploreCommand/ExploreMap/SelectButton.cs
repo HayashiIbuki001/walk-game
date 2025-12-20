@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SelectButton : MonoBehaviour
 {
+    [SerializeField] private GameObject ExploreCanvas;
+
     public Inventory inventory;
     public ExploreMapData data;
 
@@ -9,10 +11,17 @@ public class SelectButton : MonoBehaviour
 
     public void OnClickButton()
     {
-        GetItem();
+        int dropItemCount = Random.Range(1, 3);
+
+        for (int i = 0; i < dropItemCount; i++)
+        {
+            GetItem();
+        }
 
         int eventIndex = Random.Range(0, 4);
         EventManager.Instance.RunEvent(locationIndex, eventIndex);
+
+        ExploreCanvas.SetActive(false);
     }
 
     private void GetItem()
