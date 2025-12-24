@@ -31,6 +31,6 @@ public class SelectButton : MonoBehaviour
 
         inventory.AddItem(item);
 
-        ExploreText.Instance.Enqueue($"{item.itemName} getting.");
+        TextQueueController.Instance.Enqueue($"{item.itemName}‚ğŒ©‚Â‚¯‚½B");
     }
 }

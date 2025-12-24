@@ -1,14 +1,16 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using TMPro;
 
-public class ExploreText : MonoBehaviour
+public class TextQueueController : MonoBehaviour
 {
-    public static ExploreText Instance;
+    public static TextQueueController Instance;
 
     Queue<string> textQueue = new();
     bool isShowing;
+    private Coroutine typingCoroutine;
 
     [SerializeField] TextMeshProUGUI textUI;
     [SerializeField] private GameObject mainCanvas;
@@ -50,7 +52,41 @@ public class ExploreText : MonoBehaviour
         }
 
         isShowing = true;
-        textUI.text = textQueue.Dequeue();
+        string nextText = textQueue.Dequeue();
         gameObject.SetActive(true);
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        typingCoroutine = StartCoroutine(TypeText(nextText));
+    }
+
+    private IEnumerator TypeText(string message)
+    {
+        isShowing = true;
+        textUI.text = "";
+
+        foreach (char c in message)
+        {
+            textUI.text += c;
+            yield return new WaitForSeconds(0.03f);
+        }
+
+        typingCoroutine = null;
+    }
+
+    public void OnClickNext()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            textUI.text = textQueue.Peek();
+            typingCoroutine = null;
+            return;
+        }
+
+        ShowNext();
     }
 }

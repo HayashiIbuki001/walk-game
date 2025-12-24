@@ -3,6 +3,7 @@ using static UnityEditor.Progress;
 
 public class ParkEventController : MonoBehaviour
 {
+
     public void Execute(int index)
     {
         switch (index)
@@ -16,16 +17,30 @@ public class ParkEventController : MonoBehaviour
 
     public void EventA()
     {
-        ExploreText.Instance.Enqueue($"wao! neko!");
+        TextQueueController.Instance.Enqueue($"草むらを見渡していると、四つ葉のクローバーをみつけた。\n今日は運がついているかもしれない。");
+        TextQueueController.Instance.Enqueue($"体力が10、スタミナが20回復した。");
     }
 
     public void EventB()
     {
-        ExploreText.Instance.Enqueue("who are you?");
+        TextQueueController.Instance.Enqueue($"ベンチを見つけた。少し休憩していこう。\nベンチに腰を下ろした。");
+        TextQueueController.Instance.Enqueue($"スタミナが15回復した。");
     }
 
     public void EventC()
     {
-        ExploreText.Instance.Enqueue("oh! rain!");
+        TextQueueController.Instance.Enqueue($"ふと空を見上げると、カラスがこっちに来ている！\nカラスはなにかを持って飛び去って行った...");
+
+        string removedItem;
+        Inventory.Instance.RemoveRandomItem(out removedItem);
+
+        if (!string.IsNullOrEmpty(removedItem))
+        {
+            TextQueueController.Instance.Enqueue($"{removedItem}を失った...");
+        }
+        else
+        {
+            TextQueueController.Instance.Enqueue($"何も失うものがない。");
+        }
     }
 }
